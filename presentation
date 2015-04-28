@@ -1,0 +1,69 @@
+* Acerca de Git
+  - ¿Por que es necesario?
+  - Otras opciones en control de versiones
+  - Distribuidos y centralizados
+
+* Recursos
+  - Pro Git book. http://git-scm.com/book
+  - StackOverflow
+  - Internet
+
+* Caracteristicas de Git
+  - Guarda snapshots no diferencias de archivos
+  - Opera independiente de un servidor, casi todo es local
+  - Integrity checks
+  - Casi unicamente añade datos
+  - Tres estados ( Working Dir, Staging Area, Repository (.git) )
+  
+* Git config
+  -$ git config --global user.name "Juan Perez"
+  -$ git config --global user.email "juan@perez.com"
+  -$ git config --global core.editor vim
+  -$ git config --list
+
+* Ayuda
+  -$ git help [config]
+  
+* Como usarlo!!!
+  -$ git init
+  -$ git add [single file/path/dirblob]
+  -$ git commit -m "Actualizando nombres"
+  -$ git clone
+
+* Status
+  - Editar archivo
+  -$ git status
+  -$ Editar nombre_archivo.txt
+  -$ git diff
+  -$ git add nombre_archivo.txt
+  -$ git status
+  -$ git status --staged (--cached)
+  -$ git commit
+  -$ git status -s (--short)
+  -$ git push -u origin master
+  -$ git log
+
+* Ignorar archivos
+  - Editar .gitignore
+
+* Eliminar archivos
+  -$ git rm (-f) file.txt
+  - Cancelar 
+    +$ git reset HEAD file.txt
+
+* Mover archivos (renombrar)
+  -$ git mv file.txt new_file.txt
+  -$ git mv path/file.txt path/new_file.txt
+
+* Git Log
+  -$ git log
+  -$ git log -p  (diferencias entre los commits)
+  -$ git log --since=2.weeks
+  - Opciones en http://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History
+  
+* Github
+  -$ Configuracion con SSH
+  -$ https://help.github.com/articles/generating-ssh-keys/
+  -$ ls -al ~/.ssh
+  -$ ssh-keygen -t rsa -C "your_email@example.com"
+  -$ Añadir llaves a github Paso 4
