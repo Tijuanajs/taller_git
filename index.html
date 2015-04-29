@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Taller Git - Tijuana.js - Abril 2015</title>
+
+		<meta name="description" content="Presentacion de taller de git">
+		<meta name="author" content="Adan Alvarado">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/moon.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<img src="images/git-logo.png" width="200" border=0 />
+					<h1>Taller Git</h1>
+					<h3>Tijuana.js Abril 2015</h3>
+					<p>
+						<small><a href="http://hakim.se">Adan Alvarado</a> / <a href="http://twitter.com/adantj">@adantj</a></small>
+					</p>
+				</section>
+
+				<section>
+					<h2>Hola!</h2>
+					<p>
+						Presentacion y todas esas cosas
+					</p>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						#Acerca de Git
+						* ¿Por que es necesario?
+						* Otras opciones en control de versiones
+						* Distribuidos y centralizados
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						#Recursos
+						* Pro Git book. http://git-scm.com/book
+						* StackOverflow
+						* Internet
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						#Caracteristicas Git
+						* Snapshots
+						* Local
+						* Revision de integridad
+						* Añade datos
+						* Tres estados
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						#Configuracion Git
+
+						Git config
+						
+						```bash
+							$ git config --global user.name "Juan Perez"
+							$ git config --global user.email "juan@perez.com"
+							$ git config --global core.editor vim
+						```
+
+						```
+							$ git config --list
+						```
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						#¿Como Usarlo?
+						```
+						$ git init
+						$ git add [single file/path/dirblob]
+						$ git commit -m "Actualizando nombres"
+						```
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						#Status
+						
+						Editamos archivo
+
+						```
+						$ git status
+						$ Editar nombre_archivo.txt
+						$ git diff
+						$ git add nombre_archivo.txt
+						$ git status
+						$ git status --staged (--cached)
+						$ git commit
+						$ git status -s (--short)
+						$ git push -u origin master
+						$ git log
+						```
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						#Ignorar archivos
+						```
+						.gitignore
+						```
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						#Eliminar
+
+						```
+						git rm file.txt
+						```
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						#Mover (Renombrar)
+
+						```
+						$ git mv file.txt new_file.txt
+						$ git mv path/file.txt path/new_file.txt
+						```
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+						#Git Log
+
+						La bitácora
+
+						```
+						$ git log
+						$ git log -p  (diferencias entre los commits)
+						$ git log --since=2.weeks
+						```
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						#GitHub
+						Configuracion SSH en 
+
+						https://help.github.com/articles/generating-ssh-keys/
+
+						```
+						$ ls -al ~/.ssh
+						$ ssh-keygen -t rsa -C "your_email@example.com"
+						```
+
+						Añadir llaves
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						#Fin
+
+						Realizado con Reveal.js
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+						#Preguntas, dudas y Sugerencias
+						* Proximo Tema
+							* Trabajando con Remotes
+					</script>
+				</section>
+
+
+				
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
